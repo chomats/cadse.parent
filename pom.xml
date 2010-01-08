@@ -353,18 +353,18 @@
 	</properties>
 	<distributionManagement>
 		<repository>
-			<id>internal</id>
+			<id>archiva.internal</id>
 			<url>http://henry:8080/archiva/repository/internal/</url>
 		</repository>
 		<snapshotRepository>
-			<id>snapshots</id>
+			<id>archiva.snapshots</id>
 			<url>http://henry:8080/archiva/repository/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
 	<repositories>
 		<repository>
-			<id>internal</id>
+			<id>archiva.internal</id>
 			<name>Archiva Managed Internal Repository</name>
 			<url>http://henry:8080/archiva/repository/internal/</url>
 			<releases>
@@ -382,7 +382,7 @@
 		</repository>
 
 		<repository>
-			<id>snapshots</id>
+			<id>archiva.snapshots</id>
 			<name>Archiva Managed Snapshot Repository</name>
 			<url>http://henry:8080/archiva/repository/snapshots/</url>
 			<releases>
