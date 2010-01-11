@@ -3,6 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>fr.imag.adele.cadse</groupId>
 	<artifactId>fr.imag.adele.cadse.parent</artifactId>
+    <name>fr.imag.adele.cadse.parent</name>
 	<packaging>pom</packaging>
 	<version>2.3.0-SNAPSHOT</version>
 	<organization>
@@ -31,13 +32,13 @@
 					<encoding>${sourceEncoding}</encoding>
 					<source>1.6</source>
 					<target>1.6</target>
-					<compilerId>eclipse</compilerId>
+					<compilerId>jdt</compilerId>
 				</configuration>
 				<dependencies>
 			      <dependency>
-			        <groupId>org.codehaus.plexus</groupId>
-			        <artifactId>plexus-compiler-eclipse</artifactId>
-			        <version>1.5.1</version>
+			         <groupId>org.sonatype.tycho</groupId>
+    				 <artifactId>tycho-compiler-jdt</artifactId>
+    				<version>0.7.0-SNAPSHOT</version>
 			      </dependency>
 			    </dependencies>
 			</plugin>
