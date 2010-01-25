@@ -405,6 +405,26 @@
 			<url>http://henry:8080/archiva/repository/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
+	<profiles>
+		<profile>
+			<id>deploy</id>
+			<build>
+				<plugins>
+			      <plugin>
+			        <artifactId>maven-source-plugin</artifactId>
+			        <executions>
+			          <execution>
+			            <phase>package</phase>
+			            <goals>
+			              <goal>jar</goal>
+			            </goals>
+			          </execution>
+			        </executions>
+			      </plugin>
+			    </plugins>
+		    </build>
+		</profile>
+	</profiles>
 
 	<repositories>
 		<repository>
