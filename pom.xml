@@ -165,6 +165,11 @@
 				<artifactId>custom.filter</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+		  		<groupId>fr.imag.adele.cadse</groupId>
+		  		<artifactId>si.java</artifactId>
+		  		<version>${project.version}</version>
+		  	</dependency>
 
 			<dependency>
 				<groupId>org.eclipse</groupId>
