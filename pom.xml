@@ -6,6 +6,9 @@
     <name>fr.imag.adele.cadse.parent</name>
 	<packaging>pom</packaging>
 	<version>2.3.0-SNAPSHOT</version>
+	<scm>
+		<url>scm:hg:ssh://hg@henry.imag.fr/cadseg</url>
+	</scm>
 	<organization>
 		<name>Adele/LIG/ Grenoble University, France</name>
 		<url>http://www-adele.imag.fr/</url>
