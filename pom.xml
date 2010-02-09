@@ -29,6 +29,20 @@
 		<finalName>${project.name}_${project.version}</finalName>
 		<plugins>
 			<plugin>
+	  			<groupId>fr.imag.adele.tycho</groupId>
+	  			<artifactId>maven-osgi-packaging-plugin</artifactId>
+	  			<version>0.7.0-SNAPSHOT</version>
+	  			<extensions>true</extensions>
+	  			<executions>
+					<execution>
+						<goals>
+							<goal>build-qualifier</goal>
+						</goals>
+					</execution>
+				</executions>
+	  		</plugin>
+			
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
