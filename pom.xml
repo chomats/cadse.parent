@@ -66,8 +66,8 @@
 				<configuration>
 					<manifestLocation>META-INF</manifestLocation>
 					<instructions>
-						<Bundle-SymbolicName>${pom.name};singleton:=true</Bundle-SymbolicName>
-						<Bundle-Name>${pom.name}</Bundle-Name>
+						<Bundle-SymbolicName>${project.name};singleton:=true</Bundle-SymbolicName>
+						<Bundle-Name>${project.name}</Bundle-Name>
 						<Bundle-Description>${pom.description}</Bundle-Description>
 						<Private-Package></Private-Package>
 						<Import-Package>*</Import-Package>
@@ -297,13 +297,6 @@
 				<artifactId>org.eclipse.ui.editors</artifactId>
 				<version>3.5.0-v20090527-2000</version>
 			</dependency>
-			<dependency>
-				<groupId>org.eclipse</groupId>
-				<artifactId>org.eclipse.ui.ide</artifactId>
-				<version>3.5.1-M20090826-0800</version>
-			</dependency>
-
-
 			<dependency>
 				<groupId>org.eclipse</groupId>
 				<artifactId>org.eclipse.text</artifactId>
