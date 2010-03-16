@@ -85,18 +85,18 @@
 			</plugin>
 		</plugins>
 		<pluginManagement>
-            <plugins>
-                <plugin>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <configuration>
-                        <!-- The SCM username. -->
-                        <username>hg</username>
-                        <remoteTagging>false</remoteTagging>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-		
+			<plugins>
+				<plugin>
+					<artifactId>maven-release-plugin</artifactId>
+					<configuration>
+						<!-- The SCM username. -->
+						<username>hg</username>
+						<remoteTagging>false</remoteTagging>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
 	</build>
 	<pluginRepositories>
 		<pluginRepository>
@@ -261,9 +261,11 @@
 				<artifactId>org.eclipse.core.runtime</artifactId>
 				<version>${version.osgi.runtime}</version>
 			</dependency>
-
-
-
+			<dependency>
+				<groupId>org.eclipse</groupId>
+				<artifactId>org.eclipse.emf.ecore</artifactId>
+				<version>2.5.0-v200906151043</version>
+			</dependency>
 			<dependency>
 				<groupId>org.eclipse</groupId>
 				<artifactId>org.eclipse.jdt.core</artifactId>
@@ -443,8 +445,8 @@
 		<version.osgi.runtime>3.5.0-v20090525</version.osgi.runtime>
 		<version.cadse>2.3.0</version.cadse>
 		<cadse.username>${user.name}</cadse.username>
-        <cadse.hostname>forge.objectweb.org</cadse.hostname>
-        <cadse.site.deploy.dir>/var/lib/gforge/chroot/home/groups/mind/htdocs</cadse.site.deploy.dir>
+		<cadse.hostname>forge.objectweb.org</cadse.hostname>
+		<cadse.site.deploy.dir>/var/lib/gforge/chroot/home/groups/mind/htdocs</cadse.site.deploy.dir>
 	</properties>
 	<distributionManagement>
 		<repository>
@@ -457,19 +459,19 @@
 		</snapshotRepository>
 	</distributionManagement>
 	<profiles>
-	    <profile>
-            <id>release</id>
+		<profile>
+			<id>release</id>
 
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>true</value>
-                </property>
-            </activation>
+			<activation>
+				<property>
+					<name>performRelease</name>
+					<value>true</value>
+				</property>
+			</activation>
 
-            <build>
-                <plugins>
-                	<plugin>
+			<build>
+				<plugins>
+					<plugin>
 						<artifactId>maven-source-plugin</artifactId>
 						<executions>
 							<execution>
@@ -493,139 +495,139 @@
 							</execution>
 						</executions>
 					</plugin>
-                    <plugin>
-                        <artifactId>maven-antrun-plugin</artifactId>
-                        <inherited>false</inherited>
-                        <executions>
-                            <execution>
-                                <id>update version link</id>
-                                <phase>site-deploy</phase>
-                                <goals>
-                                    <goal>run</goal>
-                                </goals>
-                                <inherited>false</inherited>
-                                <configuration>
-                                    <tasks>
-                                        <!--
-                                            This Ant task updates the 'mindc'
-                                            synbolic link to point to the new
-                                            version.
-                                             <sshexec host="${ow2.hostname}" username="${ow2.username}" passphrase="" keyfile="${user.home}/.ssh/id_rsa" command="cd ${ow2.site.deploy.dir}; ln -nfs mindc-${project.version} mindc" />
-                                   
-                                        -->
-                                    </tasks>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<inherited>false</inherited>
+						<executions>
+							<execution>
+								<id>update version link</id>
+								<phase>site-deploy</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<inherited>false</inherited>
+								<configuration>
+									<tasks>
+										<!--
+											This Ant task updates the 'mindc' synbolic link to point to
+											the new version. <sshexec host="${ow2.hostname}"
+											username="${ow2.username}" passphrase=""
+											keyfile="${user.home}/.ssh/id_rsa" command="cd
+											${ow2.site.deploy.dir}; ln -nfs mindc-${project.version}
+											mindc" />
+										-->
+									</tasks>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 
-            <reporting>
-                <plugins>
-                	<!-- test coverage  <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>cobertura-maven-plugin</artifactId>
-                    </plugin>
-                    -->
-                   
+			<reporting>
+				<plugins>
+					<!--
+						test coverage <plugin> <groupId>org.codehaus.mojo</groupId>
+						<artifactId>cobertura-maven-plugin</artifactId> </plugin>
+					-->
 
-                    <!-- quality metrics -->
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>jdepend-maven-plugin</artifactId>
-                    </plugin>
 
-                    <!-- source metrics -->
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>javancss-maven-plugin</artifactId>
-                    </plugin>
-					
+					<!-- quality metrics -->
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>jdepend-maven-plugin</artifactId>
+					</plugin>
 
-                    <!-- source cross reference reports -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-jxr-plugin</artifactId>
-                        <configuration>
-                            <aggregate>true</aggregate>
-                            <windowtitle>${project.name} Source code</windowtitle>
-                            <doctitle>
-                                ${project.name} ${project.version} Source
-                                code
+					<!-- source metrics -->
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>javancss-maven-plugin</artifactId>
+					</plugin>
+
+
+					<!-- source cross reference reports -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jxr-plugin</artifactId>
+						<configuration>
+							<aggregate>true</aggregate>
+							<windowtitle>${project.name} Source code</windowtitle>
+							<doctitle>
+								${project.name} ${project.version} Source
+								code
                             </doctitle>
-                        </configuration>
-                    </plugin>
-                
-                    <!-- PMD reports -->
-                    <plugin>
-                        <artifactId>maven-pmd-plugin</artifactId>
-                        <version>2.4</version>
-                        <configuration>
-                            <excludes>
-                                <!-- exclude parser generated by jaxb -->
-                                <exclude>
-                                    fr/imag/adele/fede/workspace/as/initmodel/jaxb/*.java
+						</configuration>
+					</plugin>
+
+					<!-- PMD reports -->
+					<plugin>
+						<artifactId>maven-pmd-plugin</artifactId>
+						<version>2.4</version>
+						<configuration>
+							<excludes>
+								<!-- exclude parser generated by jaxb -->
+								<exclude>
+									fr/imag/adele/fede/workspace/as/initmodel/jaxb/*.java
                                 </exclude>
-                            </excludes>
-                            <targetJdk>1.5</targetJdk>
-                        </configuration>
-                        <reportSets>
-                            <reportSet>
-                                <id>default</id>
-                                <reports>
-                                    <report>pmd</report>
-                                </reports>
-                            </reportSet>
-                        </reportSets>
-                    </plugin>
+							</excludes>
+							<targetJdk>1.5</targetJdk>
+						</configuration>
+						<reportSets>
+							<reportSet>
+								<id>default</id>
+								<reports>
+									<report>pmd</report>
+								</reports>
+							</reportSet>
+						</reportSets>
+					</plugin>
 
-                    <!-- javadoc -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.6.1</version>
-                        <configuration>
-                            <windowtitle>${project.name} Documentation</windowtitle>
-                            <doctitle>
-                                ${project.name} ${project.version}
-                                Documentation
+					<!-- javadoc -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>2.6.1</version>
+						<configuration>
+							<windowtitle>${project.name} Documentation</windowtitle>
+							<doctitle>
+								${project.name} ${project.version}
+								Documentation
                             </doctitle>
-                            <docfilessubdirs>true</docfilessubdirs>
-                            <excludedocfilessubdir>.svn</excludedocfilessubdir>
-                            <links>
-                                <link>
-                                    http://java.sun.com/j2se/1.5/docs/api
+							<docfilessubdirs>true</docfilessubdirs>
+							<excludedocfilessubdir>.svn</excludedocfilessubdir>
+							<links>
+								<link>
+									http://java.sun.com/j2se/1.5/docs/api
                                 </link>
-                                <link>
-                                    http://fractal.objectweb.org/current/doc/javadoc/fractal
+								<link>
+									http://fractal.objectweb.org/current/doc/javadoc/fractal
                                 </link>
-                                <link>
-                                    http://fractal.objectweb.org/current/doc/javadoc/fractal-adl
+								<link>
+									http://fractal.objectweb.org/current/doc/javadoc/fractal-adl
                                 </link>
-                            </links>
-                            <quiet>true</quiet>
-                        </configuration>
-                        <reportSets>
-                            <reportSet>
-                                <id>aggregrate</id>
-                                <reports>
-                                    <report>aggregate</report>
-                                </reports>
-                                <inherited>false</inherited>
-                            </reportSet>
-                            <reportSet>
-                                <id>single</id>
-                                <reports>
-                                    <report>javadoc</report>
-                                </reports>
-                                <inherited>true</inherited>
-                            </reportSet>
-                        </reportSets>
-                    </plugin>
-                </plugins>
-            </reporting>
-        </profile>
+							</links>
+							<quiet>true</quiet>
+						</configuration>
+						<reportSets>
+							<reportSet>
+								<id>aggregrate</id>
+								<reports>
+									<report>aggregate</report>
+								</reports>
+								<inherited>false</inherited>
+							</reportSet>
+							<reportSet>
+								<id>single</id>
+								<reports>
+									<report>javadoc</report>
+								</reports>
+								<inherited>true</inherited>
+							</reportSet>
+						</reportSets>
+					</plugin>
+				</plugins>
+			</reporting>
+		</profile>
 		<profile>
 			<id>update-site</id>
 			<build>
