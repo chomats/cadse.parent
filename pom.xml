@@ -239,7 +239,18 @@
 				<groupId>fr.imag.adele.cadse</groupId>
 				<artifactId>si.persistence</artifactId>
 				<version>${project.version}</version>
-			</dependency>			
+			</dependency>
+
+			<dependency>
+				<groupId>fr.imag.adele.cadse</groupId>
+				<artifactId>Model.Workspace.CadseG</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.imag.adele.cadse</groupId>
+				<artifactId>embedded</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>org.eclipse</groupId>
