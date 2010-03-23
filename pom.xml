@@ -220,6 +220,26 @@
 				<artifactId>si.java</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>fr.imag.adele.cadse</groupId>
+				<artifactId>si.ModelVersionDB</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.imag.adele.cadse</groupId>
+				<artifactId>si.defaultclassreferencer</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.imag.adele.cadse</groupId>
+				<artifactId>si.initmodel</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.imag.adele.cadse</groupId>
+				<artifactId>si.persistence</artifactId>
+				<version>${project.version}</version>
+			</dependency>			
 
 			<dependency>
 				<groupId>org.eclipse</groupId>
