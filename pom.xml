@@ -78,7 +78,7 @@
 					<instructions>
 						<Bundle-SymbolicName>${project.name};singleton:=true</Bundle-SymbolicName>
 						<Bundle-Name>${project.name}</Bundle-Name>
-						<Bundle-Description>${pom.description}</Bundle-Description>
+						<Bundle-Description>${project.description}</Bundle-Description>
 						<Private-Package></Private-Package>
 						<Import-Package>*</Import-Package>
 						<Export-Package>*;version="${version.cadse}"</Export-Package>
