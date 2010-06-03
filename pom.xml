@@ -992,7 +992,7 @@
 					<dependency>
 						<groupId>org.eclipse</groupId>
 						<artifactId>org.apache.commons.logging</artifactId>
-						<version>1.1.1-v200904062255</version>
+						<version>1.1.1-v201005080502</version>
 					</dependency>
 					
 					<!--********************* -->
@@ -1030,7 +1030,7 @@
 					<dependency>
 						<groupId>org.eclipse</groupId>
 						<artifactId>org.apache.log4j</artifactId>
-						<version>1.2.13-v200903072027</version>
+						<version>1.2.15</version>
 					</dependency>
 					
 					<!--********************* -->
@@ -1294,7 +1294,7 @@
 					<dependency>
 						<groupId>org.eclipse</groupId>
 						<artifactId>swt</artifactId>
-						<version>3.5.2-v3557f</version>
+						<version>3.6.0-v3650</version>
 						<type>pom</type>
 					</dependency>
 				</dependencies>
@@ -1328,5 +1328,12 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
+		 <repository>
+                 <id>maven2-repository.dev.java.net</id>
+                 <name>Java.net Repository for Maven</name>
+                 <url>http://download.java.net/maven/2/</url>
+                 <layout>default</layout>
+         </repository>
+		
 	</repositories>
 </project>
