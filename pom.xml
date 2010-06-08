@@ -885,39 +885,6 @@
 				</plugins>
 			</reporting>
 		</profile>
-		<profile>
-			<id>update-site</id>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-source-plugin</artifactId>
-						<executions>
-							<execution>
-								<phase>package</phase>
-								<goals>
-									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>fr.imag.adele.maven</groupId>
-						<artifactId>maven-eclipse-plugin</artifactId>
-						<version>0.8-SNAPSHOT</version>
-						<extensions>true</extensions>
-						<executions>
-							<execution>
-								<goals>
-									<goal>bundle-source</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-
-
 	</profiles>
 
 
