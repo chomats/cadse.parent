@@ -80,7 +80,7 @@
 						<Bundle-Name>${project.name}</Bundle-Name>
 						<Bundle-Description>${project.description}</Bundle-Description>
 						<Private-Package></Private-Package>
-						<Import-Package>*</Import-Package>
+						<Import-Package>!net.sourceforge.cobertura.*,*</Import-Package>
 						<Export-Package>*;version="${version.cadse}"</Export-Package>
 						<_removeheaders>Bnd-LastModified, Include-Resource</_removeheaders>
 					</instructions>
@@ -707,6 +707,16 @@
 	</distributionManagement>
 	<profiles>
 		<profile>
+			<id>cobertura</id>
+			<dependencies>
+				<dependency>
+					<groupId>net.sourceforge.cobertura</groupId>
+					<artifactId>cobertura</artifactId>
+					<version>1.9.4.1</version>
+				</dependency>
+			</dependencies>
+		</profile>
+		<profile>
 			<id>release</id>
 
 			<activation>
@@ -755,10 +765,14 @@
 								<inherited>false</inherited>
 								<configuration>
 									<tasks>
-										<!-- This Ant task updates the 'mindc' synbolic link to point to 
-											the new version. <sshexec host="${ow2.hostname}" username="${ow2.username}" 
-											passphrase="" keyfile="${user.home}/.ssh/id_rsa" command="cd ${ow2.site.deploy.dir}; 
-											ln -nfs mindc-${project.version} mindc" /> -->
+										<!--
+											This Ant task updates the 'mindc' synbolic link to point to
+											the new version. <sshexec host="${ow2.hostname}"
+											username="${ow2.username}" passphrase=""
+											keyfile="${user.home}/.ssh/id_rsa" command="cd
+											${ow2.site.deploy.dir}; ln -nfs mindc-${project.version}
+											mindc" />
+										-->
 									</tasks>
 								</configuration>
 							</execution>
@@ -769,8 +783,10 @@
 
 			<reporting>
 				<plugins>
-					<!-- test coverage <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>cobertura-maven-plugin</artifactId> 
-						</plugin> -->
+					<!--
+						test coverage <plugin> <groupId>org.codehaus.mojo</groupId>
+						<artifactId>cobertura-maven-plugin</artifactId> </plugin>
+					-->
 
 
 					<!-- quality metrics -->
