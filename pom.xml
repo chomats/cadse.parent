@@ -901,9 +901,9 @@
 						</executions>
 					</plugin>
 					<plugin>
-						<groupId>fr.imag.adele.tycho</groupId>
-						<artifactId>maven-osgi-packaging-plugin</artifactId>
-						<version>0.7.0-SNAPSHOT</version>
+						<groupId>fr.imag.adele.maven</groupId>
+						<artifactId>maven-eclipse-plugin</artifactId>
+						<version>0.8-SNAPSHOT</version>
 						<extensions>true</extensions>
 						<executions>
 							<execution>
