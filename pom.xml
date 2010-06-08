@@ -63,9 +63,9 @@
 				</configuration>
 				<dependencies>
 					<dependency>
-						<groupId>org.sonatype.tycho</groupId>
+						<groupId>fr.imag.adele.maven</groupId>
 						<artifactId>tycho-compiler-jdt</artifactId>
-						<version>0.7.0-SNAPSHOT</version>
+						<version>0.8-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 			</plugin>
