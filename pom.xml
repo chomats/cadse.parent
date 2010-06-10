@@ -41,7 +41,7 @@
 			<plugin>
 				<groupId>fr.imag.adele.maven</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>0.8-SNAPSHOT</version>
+				<version>0.9-SNAPSHOT</version>
 				<extensions>true</extensions>
 				<executions>
 					<execution>
@@ -64,8 +64,8 @@
 				<dependencies>
 					<dependency>
 						<groupId>fr.imag.adele.maven</groupId>
-						<artifactId>tycho-compiler-jdt</artifactId>
-						<version>0.8-SNAPSHOT</version>
+						<artifactId>maven-compiler-jdt</artifactId>
+						<version>0.9-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 			</plugin>
@@ -725,7 +725,7 @@
 					<plugin>
 						<groupId>fr.imag.adele.maven</groupId>
 						<artifactId>maven-eclipse-plugin</artifactId>
-						<version>0.8-SNAPSHOT</version>
+						<version>0.9-SNAPSHOT</version>
 						<extensions>true</extensions>
 						<executions>
 							<execution>
