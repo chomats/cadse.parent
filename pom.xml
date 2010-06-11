@@ -65,7 +65,7 @@
 					<dependency>
 						<groupId>fr.imag.adele.maven</groupId>
 						<artifactId>maven-compiler-jdt</artifactId>
-						<version>0.9-SNAPSHOT</version>
+						<version>${version.fr.imag.adele.maven}</version>
 					</dependency>
 				</dependencies>
 			</plugin>
@@ -75,6 +75,17 @@
 				<configuration>
 					<encoding>${sourceEncoding}</encoding>
 				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 		<pluginManagement>
@@ -794,8 +805,7 @@
 							<aggregate>true</aggregate>
 							<windowtitle>${project.name} Source code</windowtitle>
 							<doctitle>
-								${project.name} ${project.version} Source
-								code
+								${project.name} ${project.version} Source code
                             </doctitle>
 						</configuration>
 					</plugin>
