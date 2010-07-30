@@ -7,8 +7,8 @@
 	<packaging>pom</packaging>
 	<version>2.3.0-SNAPSHOT</version>
 	<scm>
-		<connection>scm:hg:ssh://henry/fr.imag.adele.cadse.parent</connection>
-		<developerConnection>scm:hg:ssh://henry/fr.imag.adele.cadse.parent</developerConnection>
+		<connection>scm:hg:ssh://hg@henry/fr.imag.adele.cadse.parent</connection>
+		<developerConnection>scm:hg:ssh://hg@henry/fr.imag.adele.cadse.parent</developerConnection>
 		<url>http://henry:8000/fr.imag.adele.cadse.parent</url>
 	</scm>
 	<organization>
