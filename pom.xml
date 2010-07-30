@@ -1,11 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>fr.imag.adele.cadse</groupId>
 	<artifactId>fr.imag.adele.cadse.parent</artifactId>
 	<name>fr.imag.adele.cadse.parent</name>
 	<packaging>pom</packaging>
-	<version>2.3.0-SNAPSHOT</version>
+	<version>2.3.0</version>
 	<scm>
 		<connection>scm:hg:ssh://hg@henry/fr.imag.adele.cadse.parent</connection>
 		<developerConnection>scm:hg:ssh://hg@henry/fr.imag.adele.cadse.parent</developerConnection>
@@ -23,7 +22,7 @@
 			<organization>ADELE/LIG/GRENOBLE</organization>
 			<timezone>(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</timezone>
 			<roles>
-				<role></role>
+				<role />
 			</roles>
 		</developer>
 		<developer>
@@ -33,7 +32,7 @@
 			<organization>ADELE/LIG/GRENOBLE</organization>
 			<timezone>(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</timezone>
 			<roles>
-				<role></role>
+				<role />
 			</roles>
 		</developer>
 	</developers>
@@ -755,8 +754,7 @@
 								<configuration>
 									<tasks>
 										<!-- This Ant task updates the 'mindc' synbolic link to point to 
-											the new version. <sshexec host="${ow2.hostname}" username="${ow2.username}" 
-											passphrase="" keyfile="${user.home}/.ssh/id_rsa" command="cd ${ow2.site.deploy.dir}; 
+											the new version. <sshexec host="${ow2.hostname}" username="${ow2.username}" passphrase="" keyfile="${user.home}/.ssh/id_rsa" command="cd ${ow2.site.deploy.dir}; 
 											ln -nfs mindc-${project.version} mindc" /> -->
 									</tasks>
 								</configuration>
