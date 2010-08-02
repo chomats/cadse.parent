@@ -16,6 +16,26 @@
 	</organization>
 	<developers>
 		<developer>
+			<id>jacky</id>
+			<name>Jacky</name>
+			<email>jacky@imag.fr</email>
+			<organization>ADELE/LIG/GRENOBLE</organization>
+			<timezone>(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</timezone>
+			<roles>
+				<role />
+			</roles>
+		</developer>
+		<developer>
+			<id>german</id>
+			<name>German</name>
+			<email>German.Vega@imag.fr</email>
+			<organization>ADELE/LIG/GRENOBLE</organization>
+			<timezone>(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</timezone>
+			<roles>
+				<role />
+			</roles>
+		</developer>
+		<developer>
 			<id>chomats</id>
 			<name>Chomat</name>
 			<email>Stephane.Chomat@imag.fr</email>
@@ -151,171 +171,14 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>as.classreferencer</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>as.cu</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>as.eclipse</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>as.findmodel</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>as.initmodel</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>as.loadservice</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>as.modelversiondbservice</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>as.persistence</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>as.platformeIDE</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>as.operationfactory</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>as.test</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>as.scmservice</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>util</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>util.io</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>cu.core</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>compatility</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>si.view</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>si.uiplatform.swt</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>custom.filter</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.imag.adele.cadse</groupId>
-				<artifactId>si.java</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.imag.adele.cadse</groupId>
-				<artifactId>si.modelversiondb</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.imag.adele.cadse</groupId>
-				<artifactId>si.defaultclassreferencer</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.imag.adele.cadse</groupId>
-				<artifactId>si.initmodel</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.imag.adele.cadse</groupId>
-				<artifactId>si.persistence</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.imag.adele.cadse</groupId>
-				<artifactId>fr.imag.adele.graphictests</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.imag.adele.cadse</groupId>
-				<artifactId>fr.imag.adele.graphictests.cadse</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.imag.adele.cadse</groupId>
-				<artifactId>testplatform</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.imag.adele.cadse</groupId>
-				<artifactId>Model.Workspace.CadseG</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.imag.adele.cadse</groupId>
-				<artifactId>embedded</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.imag.adele.cadse</groupId>
-				<artifactId>CopyComposer.CADSE</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.imag.adele.cadse</groupId>
-				<artifactId>Model.Workspace.CopyComposer</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-
-			<dependency>
 				<groupId>bak.pcj</groupId>
 				<artifactId>bak.pcj</artifactId>
-				<version>1.2.0-SNAPSHOT</version>
+				<version>1.2.0</version>
 			</dependency>
 			<dependency>
 				<groupId>rhino</groupId>
 				<artifactId>js.bundle</artifactId>
-				<version>1.7.0-R2-SNAPSHOT</version>
+				<version>1.7.0-R2</version>
 			</dependency>
 
 
